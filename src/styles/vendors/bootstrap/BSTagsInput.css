@@ -1,0 +1,54 @@
+
+.Select.form-control {
+  padding-right: 0;
+
+}
+.Select.form-control.disabled {
+  background-color: #eee;
+  cursor: not-allowed;
+}
+
+.Select.form-control.disabled .Select-control{
+  background-color: #eee;
+  cursor: not-allowed;
+}
+
+.Select.form-control .Select-control {
+  border: none;
+  height: auto;
+
+ }
+
+.Select.form-control .Select-control:hover {
+  box-shadow: none;
+}
+
+.Select.form-control .Select-control .Select-placeholder {
+  line-height: inherit;
+  padding-left: 0;
+
+}
+
+.Select.form-control .Select-control .Select-item {
+  margin-top: 0;
+  margin-left: 0;
+  margin-right: 0.3rem;
+}
+.Select.form-control .Select-control .Select-input {
+  height: auto;
+  margin-left: 0;
+}
+
+.Select.form-control .Select-control .Select-input > input {
+  height: auto;
+}
+
+
+.is-focused:not(.is-open) > .Select-control {
+  border-color: #08c #0099e6 #0099e6;
+  box-shadow: none;
+}
+
+.Select.form-control .Select-menu-outer {
+  margin-left: -0.75rem;
+}

@@ -1,0 +1,140 @@
+.btn {
+  @include radius-pad;
+
+  &:active,
+  &.active,
+  &:hover,
+  &:focus,
+  &.focus,
+  .open > &.dropdown-toggle {
+    background-color: lighten($light-purple, 10%);
+    border-color: lighten($light-purple, 10%);
+  }
+
+  &:active {
+    &:focus {
+      background-color: lighten($light-purple, 15%);
+      border-color: lighten($light-purple, 15%);
+    }
+  }
+}
+
+.btn-secondary {
+
+  &:active,
+  &.active,
+  &:hover,
+  &:focus,
+  &.focus,
+  .open > &.dropdown-toggle  {
+    background-color: $white;
+    border-color: lighten($light-purple, 10%);
+    color: lighten($light-purple, 10%);
+  }
+
+  &:active {
+    &:focus {
+      background-color: $white;
+      border-color: lighten($light-purple, 15%);
+      color: lighten($light-purple, 15%);
+    }
+  }
+
+  &.dropdown-toggle {
+    &.active,
+    &:hover,
+    &:focus,
+    &.focus,
+    .open > &.dropdown-toggle  {
+      background-color: $white;
+      border-color: lighten($light-purple, 10%);
+      color: lighten($light-purple, 10%);
+    }
+
+
+    background-color: $white;
+    border-color: $light-purple;
+    color: $light-purple;
+  }
+}
+
+.btn-success {
+  &:active,
+  &.active,
+  &:hover,
+  &:focus,
+  &.focus,
+  .open > &.dropdown-toggle {
+    background-color: lighten($mint, 10%);
+    border-color: lighten($mint, 10%);
+  }
+
+  &:active {
+    &:focus {
+      background-color: lighten($mint, 15%);
+      border-color: lighten($mint, 15%);
+    }
+  }
+}
+
+.btn-warning {
+  &:active,
+  &.active,
+  &:hover,
+  &:focus,
+  &.focus {
+    background-color: lighten($warning-yellow, 10%);
+    border-color: lighten($warning-yellow, 10%);
+  }
+
+  &:active {
+    &:focus {
+      background-color: lighten($warning-yellow, 15%);
+      border-color: lighten($warning-yellow, 15%);
+    }
+  }
+}
+
+.btn-danger {
+  &:active,
+  &.active,
+  &:hover,
+  &:focus,
+  &.focus {
+    background-color: lighten($brand-red, 10%);
+    border-color: lighten($brand-red, 10%);
+  }
+
+  &:active {
+    &:focus {
+      background-color: lighten($brand-red, 15%);
+      border-color: lighten($brand-red, 15%);
+    }
+  }
+}
+
+.dropdown-item {
+  &.btn {
+    &:active,
+    &.active,
+    &:hover,
+    &:focus,
+    &.focus {
+      background: transparent;
+    }
+  }
+
+  &:active {
+    &:focus {
+      color: $darker-grey;
+    }
+  }
+}
+
+.cancel-btn {
+  margin-bottom: 35px;
+}
+
+.reset-btn {
+  border: none;
+}

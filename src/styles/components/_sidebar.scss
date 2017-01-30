@@ -1,0 +1,49 @@
+.dropdown-menu {
+  z-index: 9999;
+}
+
+.main {
+  margin-left: 430px;
+}
+
+.sidebar {
+  @include no-marg-no-pad();
+  background-color: $white;
+  bottom: 0;
+  display: block;
+  height: 100vh;
+  left: 0;
+  position: fixed;
+  top: 51px;
+  width: 430px;
+  z-index: 1000;
+
+
+  .collapse-btn {
+    border-color: $grey;
+    color: $dark-grey;
+
+    &:active,
+    &.active,
+    &:active:focus,
+    &:hover,
+    &:focus,
+    &.focus {
+      border-color: lighten($grey, 10%);
+      color: lighten($grey, 10%);
+    }
+  }
+
+  .filter-button-group {
+    background-color: $white;
+    bottom: 51px;
+    position: absolute;
+    width: 100%;
+  }
+
+  .filter-form {
+    height: 90vh;
+    overflow-y: scroll;
+  }
+}
+

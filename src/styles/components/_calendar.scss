@@ -1,0 +1,28 @@
+/* Calendar SCSS
+ * @AUTHOR Ian Sayre 06/24/16
+ */
+
+.DayPicker-Day {
+  border: none !important;
+
+  &.DayPicker-Day--today {
+    color: $light-purple !important;
+  }
+
+  &.DayPicker-Day--selected {
+    background-color: $light-purple !important;
+    color: $white !important;
+  }
+}
+
+.DayPicker-Weekday {
+  color: $grey;
+  font-weight: bold;
+
+  abbr[title] {
+    border-bottom: none;
+    cursor: default;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+}

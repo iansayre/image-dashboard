@@ -1,0 +1,17 @@
+.card {
+  background-color: $white;
+  border-radius: 0;
+  box-sizing: border-box;
+}
+
+.grid-item {
+  float: left;
+  height: 207px;
+  margin: 0 #{nth($md, 1)}px #{nth($md, 1)}px 0;
+  width: 200px;
+}
+
+#load-icon {
+  top: 160px;
+  transform: translate(0, 160px);
+}

@@ -1,0 +1,56 @@
+/* FORMS STYLES
+ * @AUTHOR Ian Sayre 06/23/15
+ */
+
+.btn {
+  white-space: normal;
+}
+
+.collapse-btn {
+  min-height: 32px;
+  line-height: 100%;
+  vertical-align: middle;
+}
+
+.dropdown-toggle {
+  background: $white;
+  border-color: $grey;
+  color: $black;
+  text-align: left;
+
+  &:active,
+  &.active,
+  &:active:focus,
+  &:hover,
+  &:focus,
+  &.focus {
+    background-color: $white;
+    border-color: lighten($grey, 10%);
+    color: lighten($black, 10%);
+  }
+
+  &:active:focus {
+    background-color: $white;
+    border-color: lighten($grey, 15%);
+    color: lighten($black, 15%);
+  }
+}
+
+.form-control {
+  @include radius-pad();
+  border-color: $grey;
+  height: 32px;
+  line-height: 18px;
+  webkit-appearance: none !important;
+  moz-appearance: none !important;
+
+  &::after {
+    content: '\f0d7';
+    font-family: 'fontawesome-webfont';
+    position: absolute;
+    right: 0;
+  }
+}
+
+
+

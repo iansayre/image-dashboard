@@ -1,0 +1,82 @@
+/**
+  * BASE STYLES SCSS
+  * Opera MediaWorks 2016
+  * @AUTHOR Ian Sayre
+*/
+
+body {
+  background-color: $light-grey;
+  color: $darker-grey;
+  font-family: $font-stack;
+  font-size: 14px;
+}
+
+a {
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+ul {
+  @include no-marg-no-pad();
+}
+
+#app {
+  height: 100%;
+}
+
+.navbar {
+  &.ad-nav {
+    background-color: $dark-purple;
+    color: $white;
+    text-align: center;
+  }
+}
+
+
+.light-grey {
+  background-color: $light-grey;
+}
+
+.opacity-50 {
+  @include opacity(50);
+}
+
+.opacity-60 {
+  @include opacity(60);
+}
+
+.opacity-70 {
+  @include opacity(70);
+}
+
+.rotate-45 {
+  @include rotate(45deg);
+}
+
+.rotate-90 {
+  @include rotate(90deg);
+}
+
+.rotate-180 {
+  @include rotate(180deg);
+}
+
+.rotate-270 {
+  @include rotate(270deg);
+}
+
+@include box-spacing($zero);
+@include box-spacing($xs);
+@include box-spacing($sm);
+@include box-spacing($md);
+@include box-spacing($lg);
+@include box-spacing($xl);
+@include box-spacing($xxl);
+
+@include generate-borders($direction-vars);
+
+@include generate-spacing($top-space-vars);
+@include generate-spacing($right-space-vars);
+@include generate-spacing($bottom-space-vars);
+@include generate-spacing($left-space-vars);

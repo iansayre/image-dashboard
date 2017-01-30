@@ -1,0 +1,21 @@
+.ad-flag {
+  border: solid 1px;
+  border-radius: 2px;
+  color: $white;
+  padding: 1px 5px;
+
+  &.ad-allowed {
+    background-color: $mint;
+    border-color: $dark-mint;
+  }
+
+  &.ad-blocked {
+    background-color: $dark-red;
+  }
+}
+
+.card-flag {
+  margin-left: 180px;
+  position: absolute;
+  z-index: 30;
+}

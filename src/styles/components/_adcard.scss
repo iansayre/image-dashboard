@@ -1,0 +1,57 @@
+/* Ad Card styles
+ * @AUTHOR Ian Sayre 07/28/16
+ */
+
+.ad-card {
+  // @include ad-card-grid(4, 4%);
+  border: 1px solid $card-border;
+
+  img {
+    max-height: 135px;
+  }
+
+  .ad-image {
+    height: 135px;
+
+    .center {
+      top: 35%;
+    }
+
+    .fade-overlay {
+      background: $opacity-white;
+      content: ' ';
+      display: block;
+      height: 135px;;
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: 10;
+    }
+  }
+
+  .ad-info {
+    height: 72px;
+  }
+
+  .bidder {
+    font-family: $bold-stack;
+
+    &.blocked-ad {
+      color: $dark-red;
+    }
+  }
+
+  &:hover {
+    border: 1px solid $light-purple;
+    box-shadow: 0 0 3px $black;
+    cursor: pointer;
+  }
+
+  .dead-face {
+    font-size: 50px;
+  }
+
+}
+
+

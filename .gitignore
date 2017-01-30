@@ -1,3 +1,5 @@
+.Ds_Store
+node_modules/
 src/GoogleCreds.js
 src/utils/apiUtils.js
 src/utils/GoogleAuthUtil.js

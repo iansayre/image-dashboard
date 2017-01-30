@@ -1,0 +1,225 @@
+/*Ad Modal Styles
+ * @AUTHOR Ian Sayre 08/01/16
+ */
+
+.ad-data {
+  font-family: $bold-stack;
+  overflow-wrap: break-word;
+  white-space: initial;
+}
+
+.ad-help {
+  color: $dark-grey;
+  font-family: $bold-stack;
+  font-size: 1.2rem;
+}
+
+.ad-impression {
+  color: $dark-grey;
+}
+
+.ad-info {
+  .bidder-id {
+    color: $grey;
+    font-size: .7143rem;
+  }
+
+  .block-options {
+    list-style: none;
+
+    li {
+      color: $light-purple;
+      cursor: pointer;
+
+      &:hover {
+        background-color: lighten($light-purple, 30%);
+      }
+    }
+  }
+
+  .cancel-btn {
+    bottom: 0;
+    position: absolute;
+  }
+
+  .help-container {
+    bottom: 64px;
+    position: absolute;
+    right: 28px;
+  }
+
+  .row {
+    padding-bottom: 20px;
+  }
+}
+
+.ad-status {
+  font-family: $bold-stack;
+}
+
+.ad-type,
+.flag-reason {
+  font-family: $font-stack;
+  font-size: 12px;
+}
+
+.ad-status-footer {
+  .btn {
+    padding: 5px 22px;
+  }
+}
+
+.ad-status-footer,
+.modal-image-footer {
+  bottom: 0;
+  position: absolute;
+  width: 100%;
+}
+
+.info-col,
+.modal-image {
+  min-height: 600px;
+}
+
+.modal-image-container {
+  height: 100%;
+
+  .center {
+    left: 50%;
+    top: 48%;
+    transform: translate(-50%, -48%);
+  }
+
+  .dead-face {
+    font-size: 50px;
+  }
+
+  .img-fluid {
+    max-width: 50%;
+  }
+}
+
+.modal {
+  .row,
+  .col {
+    @extend .pad-zero;
+  }
+}
+
+.modal-content {
+  border-radius: 0;
+
+  .modal-body {
+    @include no-marg-no-pad();
+  }
+  @media (min-width: $screen-xl) {
+    transform: translate(0, 25%);
+  }
+}
+
+.modal-dialog {
+  &.alert-modal,
+  &.markup-modal,
+  &.network-modal {
+
+    .modal-content {
+      transform: translate(0, 15%);
+
+      @media (min-width: $screen-xl) {
+        transform: translate(0, 50%);
+      }
+    }
+
+    @media (min-width: $screen-md-min) {
+      width: 1140px;
+    }
+  }
+
+  @media (min-width: $screen-md-min) {
+    width: 1060px;
+  }
+}
+
+.alert-container {
+  .alert {
+    border: 0 solid transparent;
+    margin: 0;
+    padding: 16px 11px;
+
+    &.alert-success {
+      @include alert-border($success-green);
+    }
+
+    &.alert-warning {
+      @include alert-border($warning-yellow);
+    }
+
+    &.alert-danger {
+      @include alert-border($alert-red);
+    }
+  }
+
+  .alert-btn {
+    font-size: 1rem;
+    position: absolute;
+    right: 16px;
+    top: 70px;
+  }
+}
+
+.alert-scroll {
+  position: absolute;
+}
+
+.markup-modal {
+
+  .markup-container {
+    height: 360px;
+    overflow-wrap: break-word;
+    overflow-y: scroll;
+    width: 1100px;
+    word-wrap: break-word;
+  }
+}
+
+.modal-image-footer {
+  background-color: $black;
+  color: $white;
+  height: 35px;
+
+  a {
+    color: $white;
+  }
+
+  .modal-links {
+    li {
+      cursor: pointer;
+      display: inline-block;
+      font-size: 1rem;
+      font-weight: bold;
+    }
+  }
+}
+
+.network-modal {
+  // transform: translate(0, 50%);
+
+  .render-calls {
+    height: 360px;
+    overflow-y: scroll;
+
+    .btn-secondary {
+      border-color: $dark-grey;
+      color: $dark-grey;
+      cursor: default;
+    }
+
+    .request-time {
+      color: $dark-grey;
+    }
+
+    .row {
+      @extend .pad-b-sm;
+    }
+  }
+}

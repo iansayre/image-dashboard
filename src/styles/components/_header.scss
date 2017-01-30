@@ -1,0 +1,25 @@
+/**
+ * HEADER SCSS
+ * Opera MediaWorks 2015
+ * @AUTHOR Ian Sayre
+*/
+
+.header {
+  height: 60px;
+  list-style: none;
+  margin-bottom: 0;
+  padding-left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: $zindex-navbar;
+}
+
+.header-dark {
+  background-color: $darker-grey;
+  color: $lightest-grey;
+}
+
+.header-light {
+  background-color: $white;
+}

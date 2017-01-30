@@ -1,0 +1,137 @@
+/*
+ * MIXIN SCSS
+ * Opera MediaWorks 2016
+ *@Author Ian Sayre */
+
+
+@mixin ad-card-grid($numPerRow, $marg) {
+  margin: 0 $marg $marg 0;
+  width: ( ( 100 - ( ($numPerRow - 1) * $marg) ) / $numPerRow );
+
+  &:nth-child(#{$numPerRow}n) {
+    margin: 0;
+  }
+
+}
+
+@mixin alert-border($alertTypeColor) {
+  border-left: 5px solid $alertTypeColor;
+}
+
+@mixin box-spacing($space-size) {
+  .marg-#{nth($space-size, 2)} {
+    margin: #{nth($space-size, 1)}px;
+  }
+
+  .pad-#{nth($space-size, 2)} {
+    padding: #{nth($space-size, 1)}px;
+  }
+}
+
+@mixin centered($horizontal: true, $vertical: true) {
+  position: absolute;
+  @if ($horizontal and $vertical) {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  } @else if ($horizontal) {
+    left: 50%;
+    transform: translate(-50%, 0);
+  } @else if ($vertical) {
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+}
+
+@mixin clearfix() {
+  &:before,
+  &:after {
+    content: ' ';
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+@mixin generate-borders($border-directions) {
+  @each $direction in $border-directions {
+    .border-#{nth($direction, 1)} {
+      border-#{nth($direction, 2)}: 1px solid $grey;
+    }
+  }
+}
+
+// generate margins and padding
+// .marg-{direction}-{size}{
+  // margin-{direction}: {value}px;
+// }
+// .pad-{direction}-{size} {
+  // padding-{direction}: {value}px;
+// }
+// TODO: refactor at a later date
+@mixin generate-spacing($space-directions) {
+  @each $space in $space-directions {
+    .marg-#{nth($space, 3)}-#{nth($space, 1)} {
+      margin-#{nth($space, 2)}: #{nth($space, 4)}px;
+    }
+
+    .pad-#{nth($space, 3)}-#{nth($space, 1)} {
+      padding-#{nth($space, 2)}: #{nth($space, 4)}px;
+    }
+  }
+}
+
+
+// font family
+@mixin get-font($family,$src,$style: normal,$weight: normal) {
+  @font-face {
+    font-family: $family;
+    src: url('#{$src}.eot'); // IE9 compat
+    src: url('#{$src}.eot?#iefix') format('embedded-opentype'), // IE8 and below
+         url('#{$src}.woff') format('woff'), // standards
+         url('#{$src}.ttf') format('truetype'); // Safari, Android, iOS
+
+    font-style: $style;
+    font-weight: $weight;
+  }
+}
+
+@mixin no-marg-no-pad() {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin opacity($opacityVal) {
+  $IEVal: $opacityVal * 100;
+  opacity: $opacityVal;
+  -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity='+$IEVal+')';
+  filter: alpha(opacity=$IEVal);
+}
+
+@mixin radius-pad() {
+  border-radius: 2px !important;
+  font-size: 12px;
+  padding: nth($xs, 1), nth($sm, 1) !important;
+}
+
+
+@mixin rotate($degrees) {
+  transform: rotate($degrees);
+}
+
+@mixin vector-background($name) {
+  background: url('../../demo/images/#{$name}.png') transparent 0 0 no-repeat; //IE8
+  // background: none, url('../../demo/images/#{$name}.svg') 0 0 no-repeat;
+}
+
+%visually-hidden {
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip: rect(0, 0, 0, 0);
+  position: absolute;
+}

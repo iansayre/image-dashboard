@@ -1,0 +1,16 @@
+body {
+  padding-top: 60px;
+}
+
+.navbar {
+  background-color: $darker-grey;
+  border-radius: 0 !important;
+  height: 60px;
+}
+
+
+.header-nav-items {
+  position: absolute;
+  right: 32px;
+  top: 15px;
+}

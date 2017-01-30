@@ -1,0 +1,29 @@
+/**
+  * TYPOGRAPHY SCSS
+  * Opera MediaWorks 2016
+  * @AUTHOR Ian Sayre
+*/
+
+
+@include get-font('lato', '../fonts/lato/Lato-Regular');
+@include get-font('lato-bold', '../fonts/lato/Lato-Bold');
+
+// font vars
+$bold-stack: ('lato-bold', 'Lucida Grande', Helvetica, Arial, san-serif);
+$font-stack: ('lato', 'Lucida Grande', Helvetica, Arial, san-serif);
+
+h1, h2, h3, h4, h5, h6, th {
+  font-family: $font-stack;
+}
+
+.header {
+  color: $dark-grey;
+}
+
+.box-header {
+  font-size: 1.125em;
+}
+
+.page-title {
+  font-size: 1.25em;
+}

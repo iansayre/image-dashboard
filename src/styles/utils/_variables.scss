@@ -1,0 +1,85 @@
+/**
+  * VARIABLES SCSS
+  * Copyright Opera MediaWorks 2016
+  * @AUTHOR Ian Sayre */
+
+// COLORS ////////////
+$brand-red: rgba(254, 35, 50, 1); // #fe2332
+$dark-red: rgba(206, 23, 41, 1); // #ce1729
+$dark-purple: rgba(66, 69, 127, 1); // #42457f
+$light-purple: rgba(116, 121, 232, 1); // #7479e8
+$dark-mint: rgba(53, 185, 147, 1); // #35b993;
+$mint: rgba(68, 212, 175, 1);// #44d4af
+
+// ALERT COLORS ////////////
+$alert-red: rgba(231, 52, 55, 1); // #e73437
+$success-green: rgba(76, 175, 80, 1); // #4caf50
+$warning-yellow: rgba(255, 193, 7, 1); // #ffc107
+
+
+// BLACK WHITE AND GREY ////////////
+$black: rgba(0, 0, 0, 1);
+$darker-grey: rgba(51, 62, 75, 1); // #333e4b
+$dark-grey: rgba(85, 104, 119, 1);    // #556877
+$grey: rgba(213, 214, 215, 1); // #d5d6d7
+$light-grey: rgba(247, 248, 249, 1); // #f7f8f9
+$white: rgba(255, 255, 255, 1);
+
+// OTHER COLORS /////////////////
+$card-border: rgba(223, 227, 231, 1); // #dfe3e7
+$opacity-white: rgba(255, 255, 255, .4);
+
+
+// BOOTSTRAP BUTTON VARIABLES ////////////
+$btn-danger-bg: $brand-red;
+$btn-danger-border: $brand-red;
+$btn-primary-bg: $light-purple;
+$btn-primary-boarder: $light-purple;
+$btn-secondary-color: $light-purple;
+$btn-secondary-border: $light-purple;
+$btn-success-bg: $mint;
+$btn-success-border: $mint;
+$btn-warning-bg: $warning-yellow;
+$btn-warning-border: $warning-yellow;
+
+// screen break points ////////////
+$screen-xs: 480px;
+$screen-sm: 768px;
+$screen-md: 992px;
+$screen-lg: 1200px;
+$screen-xl: 1400px;
+
+$screen-xs-min: $screen-xs;
+$screen-sm-min: $screen-sm;
+$screen-md-min: $screen-md;
+$screen-lg-min: $screen-lg;
+$screen-xl-mix: $screen-xl;
+
+$screen-xs-max: ($screen-sm - 1);
+$screen-sm-max: ($screen-md - 1);
+$screen-md-max: ($screen-lg - 1);
+$screen-lg-max: ($screen-xl - 1);
+
+// spacing sizes ////////////
+$zero: 0 'zero';
+$xs: 5 'xs'; //5px
+$sm: 10 'sm'; //10px
+$md: 25 'md'; //25px
+$lg: 40 'lg'; //40px
+$xl: 60 'xl'; //60px
+$xxl: 80 'xxl'; //80px
+
+$direction-vars: (t, top), (r, right), (b, bottom), (l, left);
+
+// spacing arrays ////////////
+// TODO: refactor this and the spacing mixin at a later date.
+$top-space-vars: (nth($zero, 2) top t nth($zero, 1), nth($xs, 2) top t nth($xs, 1), nth($sm, 2) top t nth($sm, 1), nth($md, 2) top t nth($md, 1), nth($lg, 2) top t nth($lg, 1), nth($xl, 2) top t nth($xl, 1), nth($xxl, 2) top t nth($xxl, 1));
+$right-space-vars: (nth($zero, 2) right r nth($zero, 1), nth($xs, 2) right r nth($xs, 1), nth($sm, 2) right r nth($sm, 1), nth($md, 2) right r nth($md, 1), nth($lg, 2) right r nth($lg, 1), nth($xl, 2) right r nth($xl, 1), nth($xxl, 2) right r nth($xxl, 1));
+$bottom-space-vars: (nth($zero, 2) bottom b nth($zero, 1), nth($xs, 2) bottom b nth($xs, 1), nth($sm, 2) bottom b nth($sm, 1), nth($md, 2) bottom b nth($md, 1), nth($lg, 2) bottom b nth($lg, 1), nth($xl, 2) bottom b nth($xl, 1), nth($xxl, 2) bottom b nth($xxl, 1));
+$left-space-vars: (nth($zero, 2) left l nth($zero, 1), nth($xs, 2) left l nth($xs, 1), nth($sm, 2) left l nth($sm, 1), nth($md, 2) left l nth($md, 1), nth($lg, 2) left l nth($lg, 1), nth($xl, 2) left l nth($xl, 1), nth($xxl, 2) left l nth($xxl, 1));
+
+
+
+$transparent: transparent;
+
+$zindex-navbar: 1000 !default;
